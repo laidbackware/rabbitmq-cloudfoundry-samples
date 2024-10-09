@@ -9,15 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
     // @Autowired AmqpTemplate amqpTemplate;
 
-    // @RequestMapping(value = "/")
-    // public String home(Model model) {
-    //     return "WEB-INF/jsp/home.jsp";
-    // }
-
-    // @GetMapping("")
     @RequestMapping(value = "/")
     public String index(Model model) {
-        System.out.println("Requesting /");
         model.addAttribute(new Message());
         return "index";
     }
