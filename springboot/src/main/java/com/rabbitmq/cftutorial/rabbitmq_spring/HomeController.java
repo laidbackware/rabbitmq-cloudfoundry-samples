@@ -9,10 +9,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
     // @Autowired AmqpTemplate amqpTemplate;
 
+    // @RequestMapping(value = "/")
+    // public String home(Model model) {
+    //     return "WEB-INF/jsp/home.jsp";
+    // }
+
+    // @GetMapping("")
     @RequestMapping(value = "/")
-    public String home(Model model) {
+    public String index(Model model) {
+        System.out.println("Requesting /");
         model.addAttribute(new Message());
-        return "WEB-INF/jsp/home.jsp";
+        return "index";
     }
 
     @RequestMapping(value = "/publish", method=RequestMethod.POST)
@@ -20,7 +27,7 @@ public class HomeController {
         // Send a message to the "messages" queue
         // amqpTemplate.convertAndSend("messages", message.getValue());
         model.addAttribute("published", true);
-        return home(model);
+        return index(model);
     }
 
     @RequestMapping(value = "/get", method=RequestMethod.POST)
@@ -33,6 +40,6 @@ public class HomeController {
         else
             model.addAttribute("got_queue_empty", true);
 
-        return home(model);
+        return index(model);
     }
 }

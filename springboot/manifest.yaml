@@ -2,7 +2,7 @@
 applications:
 - name: rb
   memory: 1G
-  path: target/rabbitmq-spring-0.0.1-SNAPSHOT.jar
+  path: target/rabbitmq-spring-0.0.1-SNAPSHOT.war
   instances: 1
   buildpack: java_buildpack_offline
   env:
