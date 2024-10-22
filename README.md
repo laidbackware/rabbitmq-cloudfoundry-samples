@@ -5,7 +5,7 @@ This repository contains sample applications to demonstrate the use of [RabbitMQ
 
 Examples are provided for the following languages/runtimes: 
 
-* [Java with Spring](spring)
+* [Java with Spring Boot](springboot)
 * [Ruby with Rails](rails)
 * [Ruby with Sinatra](sinatra)
 * [Node.js](nodejs)
